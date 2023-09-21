@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <link rel="icon" href="img/fav-icon.png">
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/eventos.css" type="text/css">
+    <script src="https://kit.fontawesome.com/e2a8d0d6fc.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script class="vlibras" src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <header>
+        <div class="caixa-esquerda">
+            <a href="index.html" id="logo">
+                <img src="img/icones/logo-yugi-universe.png" alt="yu gi oh!">
+            </a>
+        </div>
+
+        <ul class="caixa-direita" id="menu">
+            <li>
+                <a href="index.html" class="anchor-header">INÍCIO</a>
+            </li>
+            <li>
+                <a href="eventos.html" class="anchor-header">EVENTOS</a>
+            </li>
+            <li>
+                <a href="series.html" class="anchor-header">SÉRIES</a>
+            </li>
+            <li>
+                <a href="contato.html" class="anchor-header">CONTATO</a>
+            </li>
+        </ul>
+
+        <div class="hamburger-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+
+    <main>
+        <!--IMAGEM DO FUNDO-->
+        <section class="header">
+            <div class="imagem-nos">
+                <img src="img/background/atropa.png"
+                    alt="A imagem mostra um cartaz do evento Yu-Gi-Oh Duel Links Top 4. O título principal,  DUEL
+                    LINKS - TOP 4, está destacado no centro. As palavras KONAMI e WORLD CHAMPIONS 2019 também estão
+                    incluídas no título. O fundo apresenta uma camiseta azul usada por uma garota ao lado de uma bandeira
+                    japonesa. À direita, é possível ver um homem vestindo uma camiseta com a palavra PROA e uma mulher
+                    vestindo uma camiseta com uma bandeira japonesa. Vários nomes,
+                    como Masaaki Nitta, Takahiro Hamada, Rafael José e Rodrigues de Souza, estão listados abaixo do
+                    título principal, indicando os participantes ou vencedores do evento. Os
+                    nomes まあ, あれ。, Shuhei Kobayashi, Zeeta, コバヤシ,KAZUKI TAKAHASHI e GOTH NAS · TV TOKYO
+                    também são exibidos abaixo do título principal, possivelmente representando informações adicionais sobre
+                    o evento." />
+            </div>
+        </section>
+
+        <!-- CONTEUDO CARTA VIRANDO -->
+        <section class="fundo">
+            <div class="card">
+                <div class="card1__inner">
+                    <div class="card__face card__face--front">
+                        <img src="img/carta.jpg" alt="Parte  de trás da Carta Yu-Gi-Oh Evento trials of the pharaoh, fundo preto com linhas que forma um aspiral marrom.">
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card__content">
+                            <a href="https://www.yugioh-card.com/en/events-item/2023-07_totp-latam/"
+                                target="_blank"><img src="img/icones/evento1.png"
+                                    alt="Evento trials of the pharaoh"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card2__inner">
+                    <div class="card__face card__face--front">
+                        <img src="img/carta.jpg" alt="Evento speed duel gx: streets of battle city">
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card__content">
+                            <a href="https://www.yugioh-card.com/en/events-item/sbc1_celebration/" target="_blank"><img
+                                    src="img/icones/evento2.png"
+                                    alt="Evento speed duel gx: streets of battle city"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card3__inner">
+                    <div class="card__face card__face--front">
+                        <img src="img/carta.jpg" alt="Evento yu gi oh championship series">
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card__content">
+                            <a href="https://www.yugioh-card.com/en/events-item/2023-ycs-vancouver/"
+                                target="_blank"><img src="img/icones/evento3.png"
+                                    alt="Evento yu gi oh championship series"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--INSCREVA-SE FORMULARIO-->
+        <section id="forms">
+            <div class="formulario" id="formulario">
+                <div class="form-container sign-up-container">
+                    <form>
+                        <h1 class="form-title">Criar Conta</h1>
+
+                        <label class="form-label"></label>
+                        <input id="name" type="text" required placeholder="Digite seu nome" />
+                        <label class="form-label"></label>
+                        <input id="email" type="email" required placeholder="Digite seu e-mail" />
+                        <label class="form-label"></label>
+                        <input id="senha" type="password" required placeholder="Digite sua senha" />
+                        <label class="form-label"></label>
+                        <input id="data" type="date" name="date" />
+                        <label class="form-label">Cep:</label>
+                        <input name="cep" type="text" id="cep" value="" size="60" maxlength="9"
+                            placeholder="Digite seu cep" onblur="pesquisacep(this.value);" />
+                        <label class="form-label">Rua:</label>
+                        <input name="rua" type="text" id="rua" size="60" placeholder="Digite sua rua" />
+                        <button class="entrar" type="submit" onclick="Evento()">Inscreva-se</button>
+                    </form>
+                </div>
+                <div class="form-container sign-in-container">
+                    <form action="#">
+                        <h1 class="form-title">Entrar</h1>
+                        <label class="form-label"></label>
+                        <input id="email" type="email" required placeholder="Digite seu e-mail" />
+                        <label class="form-label"></label>
+                        <input id="senha" type="password" required placeholder="Digite sua senha" />
+                        <a id="esqueceu" href="#">Esqueceu a senha?</a>
+                        <button class="entrar" type="submit" onclick="Evento()">Entrar</button>
+                    </form>
+                </div>
+                <div class="overlay-container">
+                    <div class="overlay">
+                        <div class="overlay-panel overlay-left">
+                            <h1 class="bem-vindo form-title">Bem vindo de volta!</h1>
+                            <p class="texto">Para manter-se conectado conosco, faça login com seus dados pessoais</p>
+                            <button class="ghost" id="signIn" type="submit">Entrar</button>
+                        </div>
+                        <div class="overlay-panel overlay-right">
+                            <h1 class="bem-vindo">Olá!</h1>
+                            <p class="texto">Insira seus dados pessoais para abrir uma conta conosco</p>
+                            <button class="ghost" id="signUp" type="submit">Inscreva-se</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="formulario-mobile">
+            <fieldset class="angry-grid">
+                <!-- <article id="item-0">
+                    <img src="img/background/background-eventos-formulario.png">
+                </article> -->
+                <article id="imagem-responsivo-formulario">
+                    <label class="form-label"> Nome </label>
+                    <input id="name" type="text" required placeholder="Digite seu nome" />
+                    <label class="form-label"> E-Mail </label>
+                    <input id="email" type="email" required placeholder="Digite seu e-mail" />
+                    <label class="form-label"> Senha </label>
+                    <input id="senha" type="password" required placeholder="Digite sua senha" />
+                    <label class="form-label"> Data </label>
+                    <input id="data" type="date" name="date" />
+                    <label class="form-label"> CEP</label>
+                    <input name="cep" type="text" id="cep" value="" size="20" maxlength="9" placeholder="Digite seu cep"
+                        onblur="pesquisacep(this.value);" />
+                    <label class="form-label"> Rua </label>
+                    <input name="rua" type="text" id="rua" size="20" placeholder="Digite sua rua" />
+                    <button>Inscreva-se</button>
+                </article>
+            </fieldset>
+        </section>
+    </main>
+
+    <!--FOOTER-->
+    <footer>
+        <div class="footer-content">
+            <section class="footer-left-container">
+                <div class="footer-left-title-container">
+                    <h3 class="footer-left-title">
+                        YU-GI-UNIVERSE
+                    </h3>
+
+                    <div class="footer-left-image">
+                        <a href="#" class="footer-image">
+                            <img src="img/icones/logo-yugi-universe.png" alt="Logo de Yu-Gi-Oh">
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="footer-middle-container">
+                <div class="link-container">
+                    <ul class="footer-list">
+                        <li class="list-items">
+                            <a href="index.html" class="list-links">
+                                <span class="list-names">
+                                    INÍCIO
+                                </span>
+                            </a>
+                        </li>
+
+                        <li class="list-items">
+                            <a href="eventos.html" class="list-links">
+                                <span class="list-names">
+                                    EVENTOS
+                                </span>
+                            </a>
+                        </li>
+
+                        <li class="list-items">
+                            <a href="series.html" class="list-links">
+                                <span class="list-names">
+                                    SÉRIES
+                                </span>
+                            </a>
+                        </li>
+
+                        <li class="list-items">
+                            <a href="contato.html" class="list-links">
+                                <span class="list-names">
+                                    CONTATO
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="footer-right-container">
+                <div class="footer-right-content-container">
+                    <div class="follow-us-container">
+                        <h2 class="follow-us-title">
+                            SIGA-NOS
+                        </h2>
+                    </div>
+
+                    <div class="social-icons-container">
+                        <ul class="social-list">
+                            <li class="social-icon-container">
+                                <a href="#" class="icon-link">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                            </li>
+                            <li class="social-icon-container">
+                                <a href="#" class="icon-link">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li class="social-icon-container">
+                                <a href="#" class="icon-link">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="copyright-container">
+            <div class="copyright-title">
+                <h4>
+                    Desenvolvido por CodigoGeek<sup>©</sup>
+                </h4>
+            </div>
+            <p class="copyright-text">
+                Yu-Gi-Oh! é uma marca registrada de Kazuki Takahashi, Konami © 1996-2023.
+            </p>
+        </div>
+
+    </footer>
+
+    <!--SCRIPT DO FORMULARIO-->
+    <script src="js/evento.js" charset="utf-8"></script>
+    <script src="js/header.js" type="text/javascript"></script>
+</body>
+
+</html>

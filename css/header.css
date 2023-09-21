@@ -1,0 +1,128 @@
+header {
+    position: fixed;
+    width: 80%;
+    max-width: 80%;
+    height: 70px;
+    background-color: var(--clr-header);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    top: 0;
+    left: 10%;
+    z-index: 1000000;
+    transition: all 1s ease-in-out;
+}
+
+header.scrolled {
+    background-color: transparent;
+}
+
+.caixa-esquerda,
+.caixa-direita {
+    width: 40%;
+    height: 70px;
+}
+
+#logo {
+    display: block;
+    width: clamp(13rem, 16vw, 30rem);
+    position: fixed;
+    z-index: 1000000;
+    padding-left: 1rem;
+}
+
+#logo img {
+    height: 91px;
+    width: 90%;
+}
+
+.caixa-direita {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    transition: all .3s ease-in-out;
+}
+
+#menu li,
+a {
+    text-decoration: none;
+    color: var(--clr-font);
+    font-size: 32px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+#menu li:hover {
+    border-bottom: 3px solid #BF3124;
+    transition: all 0.5s;
+}
+
+.hamburger-icon {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    display: none;
+}
+
+.bar {
+    width: 100%;
+    height: 20%;
+    background-color: #fff;
+}
+
+
+main {
+    transition: all .3s ease-in-out;
+    overflow: hidden;
+    padding-top: 70px;
+}
+
+
+/* HEADER NÃO MEXER */
+@media only screen and (max-width: 1199px) {
+
+    header {
+        justify-content: space-between;
+    }
+
+    .caixa-direita {
+        display: none;
+    }
+
+    .hamburger-icon {
+        display: flex;
+        margin-right: 1rem;
+        float: right;
+    }
+
+    .caixa-direita.show-menu {
+        position: fixed;
+        top: 70px;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        max-height: 25vh;
+        align-items: flex-end;
+        justify-content: space-evenly;
+        padding-right: 1rem;
+        background-color: var(--clr-header);
+        z-index: 999;
+    }
+
+    .caixa-direita.scrolled {
+        background-color: transparent;
+    }
+
+    main.main-down {
+        padding-top: calc(70px + 25vh);
+    }
+
+}

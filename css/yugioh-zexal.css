@@ -1,0 +1,725 @@
+/* Fonte do site */
+@font-face {
+    font-family: yugioh;
+    src: url(../fonte/yu-gi-oh-matrix-bold.ttf);
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-bg: #1B1C47;
+    --clr-header: #090909;
+    --clr-second-bg: #06102a;
+    --clr-elements: #3b488f;
+    --clr-font: #fff;
+}
+
+body {
+    background-color: var(--clr-bg);
+    font-family: yugioh;
+}
+
+h1,
+p {
+    color: var(--clr-font);
+}
+
+h1 {
+    background-color: #85784b;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: clamp(2rem, 4vw, 4rem);
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+}
+
+p {
+    font-size: clamp(1rem, 2vw, 2rem);
+    ;
+    padding: 20px;
+}
+
+header {
+    position: fixed;
+    width: 80%;
+    max-width: 80%;
+    height: 70px;
+    background-color: var(--clr-header);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    top: 0;
+    left: 10%;
+    z-index: 1000000;
+    transition: all 1s ease-in-out;
+}
+
+header.scrolled {
+    background-color: transparent;
+}
+
+.caixa-esquerda,
+.caixa-direita {
+    width: 40%;
+    height: 70px;
+}
+
+#logo {
+    display: block;
+    width: clamp(13rem, 16vw, 30rem);
+    position: fixed;
+    z-index: 1000000;
+    padding-left: 1rem;
+}
+
+#logo img {
+    height: 91px;
+    width: 90%;
+}
+
+.caixa-direita {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    transition: all .3s ease-in-out;
+}
+
+#menu li,
+a {
+    text-decoration: none;
+    color: var(--clr-font);
+    font-size: 32px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+#menu li:hover {
+    border-bottom: 3px solid #BF3124;
+    transition: all 0.5s;
+}
+
+.hamburger-icon {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    display: none;
+}
+
+.bar {
+    width: 100%;
+    height: 20%;
+    background-color: #fff;
+}
+
+
+main {
+    transition: all .3s ease-in-out;
+    overflow: hidden;
+    padding-top: 70px;
+}
+
+
+/*Imagem de fundo da tela*/
+.tela-principal {
+    max-width: 80%;
+    height: 542px;
+    background-image: url(../img/background/background-zexal.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+
+}
+
+.overlay {
+    width: 100%;
+    height: 542px;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.9), transparent);
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+/* div responsável por ter a imagem do personagem*/
+#personagem-tela-principal {
+    width: 45%;
+    height: 542px;
+    margin: auto;
+}
+
+/* Ajuste do personagem a div que está dentro */
+#personagem-tela-principal img {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+/* Div responsável pelo posicionamento da Logo */
+#descricaoSerie {
+    width: 45%;
+    height: 542px;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#descricaoSerie img {
+    width: 100%;
+}
+
+.containerFormatacao {
+    width: 80%;
+    min-height: 70vh;
+    margin: 100px auto;
+
+    background-color: var(--clr-second-bg);
+    border-radius: 50px 0 50px 0;
+
+    display: flex;
+    flex-direction: row;
+
+    padding: 10px;
+    box-shadow: 0px 10px 100px #3B488F;
+}
+
+
+.caixa {
+    width: 50%;
+    height: 65vh;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.caixa1 {
+    position: relative;
+    width: 50%;
+    min-height: 65vh;
+    margin: 10px;
+    display: flex;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.caixa img {
+    width: 75%;
+    height: 85%;
+    background-image: url(../img/background/background-space.jpg);
+    border: 2px solid #BF9C2A;
+    border-radius: 50%;
+}
+
+.caixa1 span:first-of-type {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #bda556);
+    animation: animar1 2s linear infinite;
+    animation-delay: 1s;
+}
+
+/* Essa parte faz a animação da ciaxa que fara uma descrição dos personagens*/
+@keyframes animar1 {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.caixa1 span:nth-of-type(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #9C8D5A);
+    animation: animar2 2s linear infinite;
+}
+
+@keyframes animar2 {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+.caixa1 span:nth-of-type(3) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to left, transparent, #F0DA87);
+    animation: animar3 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animar3 {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+.caixa1 span:last-of-type {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to top, transparent, #f0e2b0);
+    animation: animar4 2s linear infinite;
+}
+
+@keyframes animar4 {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.descricao-personagens {
+    padding: .5rem
+}
+
+
+/* FOOTER */
+footer {
+    margin: 5vh auto 10vh auto;
+    max-width: 80%;
+    background: url(../img/background/background-space.jpg) center center no-repeat;
+    background-size: cover;
+    background-color: #fff;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+}
+
+.footer-content {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footer-left-container,
+.footer-middle-container,
+.footer-right-container {
+    width: 33.3%;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-left-title-container,
+.footer-right-content-container {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-left-title-container {
+    justify-content: space-between;
+}
+
+.footer-right-content-container {
+    justify-content: baseline;
+}
+
+.footer-left-title-container,
+a,
+.follow-us-title {
+    color: var(--clr-font);
+    text-decoration: none;
+}
+
+.footer-left-title-container,
+a,
+.follow-us-title {
+    color: var(--clr-font);
+    text-decoration: none;
+}
+
+.footer-left-title-container,
+.follow-us-title,
+.list-names {
+    color: var(--clr-font);
+    text-decoration: none;
+}
+
+.footer-left-image {
+    width: clamp(13rem, 16vw, 30rem);
+    height: clamp(7rem, 6vh, 10rem);
+}
+
+.footer-image {
+    width: 100%;
+    height: 100%;
+}
+
+.footer-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.link-container {
+    width: 80%;
+    height: 80%;
+}
+
+.footer-list {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list-links,
+.list-names,
+.list-links,
+.icon-link {
+    margin: 0;
+    font-size: 30px;
+
+}
+
+.list-names,
+.footer-left-title,
+.follow-us-title {
+    font-size: clamp(1.2rem, 1.8vw, 2.5rem);
+}
+
+.icon-link i {
+    color: var(--clr-font);
+}
+
+.social-icons-container {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.social-list {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.icon-link i {
+    font-size: 2.5rem;
+}
+
+.copyright-container {
+    width: 100%;
+    border-top: 2px solid var(--clr-font);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem 1rem 1.5rem 1rem;
+}
+
+.copyright-text {
+    margin-top: 1rem;
+}
+
+.copyright-title,
+.copyright-text {
+    color: var(--clr-font);
+    font-size: clamp(1rem, 1.5vw, 2.5rem);
+    text-align: center;
+}
+
+.follow-us-title,
+.footer-left-title {
+    font-size: clamp(1.4rem, 2.5vw, 2.5rem);
+    font-weight: bold;
+}
+
+.copyright-text{
+    padding: 0;
+}
+
+
+
+/* TABLET */
+@media only screen and (max-width: 767px) {
+    .fundo {
+        flex-direction: column;
+    }
+
+    .entrar {
+        width: 120px;
+        margin-left: 25px;
+    }
+
+    .imagem-nos {
+        width: 300vh;
+        height: 280px;
+        margin-top: 60px;
+        margin-left: 30px;
+    }
+
+    .header {
+        height: 400px;
+    }
+
+    .formulario {
+        display: none;
+    }
+}
+
+/* Responsividade dos conteudos*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .tela-principal {
+        width: 80%;
+        height: 37vh;
+    }
+
+    .overlay {
+        width: 100%;
+        height: 37vh;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* div responsável por ter a imagem do personagem*/
+    #personagem-tela-principal {
+        width: 50%;
+        height: 33vh;
+        margin-bottom: 0;
+    }
+
+    /* Ajuste do personagem a div que está dentro */
+    #personagem-tela-principal img {
+        width: 100%;
+        height: 100%;
+    }
+
+    #descricaoSerie {
+        display: none;
+    }
+
+
+    .containerFormatacao {
+        min-width: 80%;
+
+        margin: 100px auto;
+
+        background-color: var(--clr-second-bg);
+        border-radius: 50px 0 50px 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        padding: 5px;
+
+        box-shadow: 0px 10px 100px #3B488F;
+    }
+
+
+    .caixa {
+        width: 95%;
+        height: 45vh;
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .caixa1 {
+        position: relative;
+        width: 95%;
+        height: auto;
+        display: flex;
+        overflow: hidden;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    .caixa img {
+        width: 75%;
+        height: auto;
+        background-image: url(../img/background/background-space.jpg);
+        border: 2px solid #BF9C2A;
+        border-radius: 50%;
+    }
+
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 800px) {
+
+    .tela-principal {
+        width: 80%;
+        height: 50vh;
+    }
+
+    .overlay {
+        width: 100%;
+        height: 50vh;
+
+    }
+
+    /* div responsável por ter a imagem do personagem*/
+    #personagem-tela-principal {
+        width: 50%;
+        height: 45vh;
+        margin-bottom: 0;
+    }
+
+    /* Ajuste do personagem a div que está dentro */
+    #personagem-tela-principal img {
+        width: 95%;
+        height: 100%;
+    }
+
+    .containerFormatacao {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #descricaoSerie {
+        height: 45vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 10px;
+    }
+
+    #descricaoSerie img {
+        width: 100%;
+    }
+
+
+    .caixa,
+    .caixa1 {
+        width: 95%;
+        height: auto;
+    }
+
+    p {
+        font-size: clamp(1.5rem, 3.2vw, 2rem);
+        ;
+        padding: 20px;
+    }
+}
+
+/* FOOTER NÃO MEXER */
+@media only screen and (max-width: 767px) {
+    .footer-content {
+        flex-direction: column;
+        margin-top: 30px;
+    }
+
+    .footer-left-container {
+        height: auto;
+        padding: 1rem;
+    }
+
+    .footer-left-container,
+    .footer-middle-container,
+    .footer-right-container {
+        width: 100%;
+    }
+
+    .footer-left-image {
+        margin-top: 1rem;
+    }
+
+    .footer-right-content-container,
+    .footer-list,
+    .footer-left-title-container {
+        padding: 0;
+    }
+
+    .footer-right-container {
+        height: auto;
+        padding-top: 1rem;
+    }
+
+    .footer-right-content-container {
+        height: 100%;
+        justify-content: space-around;
+    }
+}
+
+/* HEADER NÃO MEXER */
+@media only screen and (max-width: 1199px) {
+
+    header {
+        justify-content: space-between;
+    }
+
+    .caixa-direita {
+        display: none;
+    }
+
+    .hamburger-icon {
+        display: flex;
+        margin-right: 1rem;
+        float: right;
+    }
+
+    .caixa-direita.show-menu {
+        position: fixed;
+        top: 70px;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        max-height: 25vh;
+        align-items: flex-end;
+        justify-content: space-evenly;
+        padding-right: 1rem;
+        background-color: var(--clr-header);
+        z-index: 999;
+    }
+
+    .caixa-direita.scrolled {
+        background-color: transparent;
+    }
+
+    main.main-down {
+        padding-top: calc(70px + 25vh);
+    }
+
+}

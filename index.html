@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Código Geek</title>
+    <link rel="icon" href="img/fav-icon.png">
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <!-- link font waresome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <!-- Vlibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script class="vlibras" src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <header>
+        <div class="caixa-esquerda">
+            <a href="index.html" id="logo">
+                <img src="img/icones/logo-yugi-universe.png" alt="Logo oficial do anime de Yu-Gi-Oh">
+            </a>
+        </div>
+
+        <ul class="caixa-direita" id="menu">
+            <li>
+                <a href="index.html">INÍCIO</a>
+            </li>
+            <li>
+                <a href="eventos.html">EVENTOS</a>
+            </li>
+            <li>
+                <a href="series.html">SÉRIES</a>
+            </li>
+            <li>
+                <a href="contato.html">CONTATO</a>
+            </li>
+        </ul>
+
+        <div class="hamburger-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+
+    <main>
+        <section id="fundo"
+            aria-label="The image depicts a mesmerizing scene of a deep blue sky adorned with countless stars. Against the backdrop of a black expanse, the sky is filled with a dazzling display of twinkling stars. The stars spread out across the entire image, creating a breathtaking celestial spectacle. The vivid blue color beautifully contrasts with the dark background, enhancing the ethereal and enchanting ambiance. As the stars gracefully descend from the sky, they leave streaks of light in their wake, creating a sense of motion and dynamism. The image captures the magical allure of a captivating starry night, immersing the viewer in a world of celestial wonder.">
+            <!-- carroucel -->
+            <div class="carrossel p-3 mt-5 teste">
+                <div class="carrossel-container pt-5">
+
+                    <div class="carrossel-item">
+                        <div class="card-carrossel p-4 d-flex justify-content-between flex-column">
+                            <img src="img/cartas/Buraco Negro.jpg" alt="carrossel de cartas raras, buraco negro">
+                        </div>
+                    </div>
+
+                    <div class="carrossel-item">
+                        <div class="card-carrossel p-4 d-flex justify-content-between flex-column">
+                            <img src="img/cartas/Castor Guerreiro.jpg"
+                                alt="carrossel de cartas raras, castor guerreiro">
+                        </div>
+                    </div>
+
+                    <div class="carrossel-item">
+                        <div class="card-carrossel p-4 d-flex justify-content-between flex-column">
+                            <img src="img/cartas/Caveira Invocada.jpg"
+                                alt="carrossel de cartas raras, caveira invocada">
+                        </div>
+                    </div>
+
+                    <div class="carrossel-item">
+                        <div class="card-carrossel p-4 d-flex justify-content-between flex-column">
+                            <img src="img/cartas/Dragão Branco de Olhos Azuis.jpg"
+                                alt="carrossel de cartas raras, dragão branco de olhos azuis">
+                        </div>
+                    </div>
+
+                    <div class="carrossel-item">
+                        <div class="card-carrossel p-4 d-flex justify-content-between flex-column">
+                            <img src="img/cartas/Dragão Definitivo de Olhos Azuis.jpg"
+                                alt="carrossel de cartas raras, dragão definitivo de olhos azuis">
+                        </div>
+                    </div>
+
+                    <div class="carrossel-item">
+                        <div class="card-carrossel p-4 d-flex justify-content-between flex-column">
+                            <img src="img/cartas/Espadas da Luz Reveladora.jpg"
+                                alt="carrossel de cartas raras, espada da luz reveladora">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carrossel-controls"></div>
+            </div>
+
+        </section>
+
+
+        <img class="flutuante" src="img/carta.jpg" alt="">
+        <img class="flutuante2" src="img/carta.jpg" alt="">
+        <img class="flutuante3" src="img/carta.jpg" alt="">
+
+        <section id="eventos">
+            <a href="eventos.html" alt="Yu-Gi-Oh" class="card-container">
+                <div class="card">
+                    <div class="wrapper">
+                        <img src="img/carta.jpg" class="cover-image" alt="Carta de Yu-Gi-Oh com um redemoinho" />
+                    </div>
+                    <img src="img/icones/world-champioship.png" class="title"
+                        alt="Logo do campeonato mundial de Yu-Gi-Oh de 2023">
+                    <img src="img/personagem/jade-yuki-yugiog-gx.png" class="character"
+                        alt="Personagem Jaden Yuki de Yu-Gi-Oh GX" />
+                </div>
+            </a>
+        </section>
+
+        <section class="noticias-container">
+            <div id="newsletter">
+                <h2 class="newsletter-title">Inscreva-se na nossa newsletter</h2>
+                <form class="forms-container">
+                    <fieldset class="form-field">
+                        <label class="email">E-mail</label>
+                        <input id="email" type="email" required placeholder="Digite seu e-mail">
+                        <i class="fa-regular fa-envelope" style="color: #fff;"></i>
+                    </fieldset>
+                    <button id="botao" type="submit" onclick="Evento()" href="#">ENVIAR</button>
+                </form>
+            </div>
+
+            <div class="noticias">
+                <div class="not-container">
+                    <a href="https://www.yugioh-card.com/en/news/2023-ygo-national-championships/" target="_blank"
+                        class="not-img-container">
+                        <img src="img/icones/2023-wcq-NATIONAL_400.png"
+                            alt="Logo do qualificatório nacional para o campeonato mundial de Yu-Gi-Oh">
+                    </a>
+                    <article class="not-desc">
+                        <h4 class="desc-title">
+                            O caminho para Yu-Gi-Oh!
+                            <br>
+                            O Campeonato Mundial 2023 continua!
+                        </h4>
+                        <p class="desc-text">
+                            Os campeonatos nacionais de Yu-Gi-Oh 2023, começam em maio, com milhares de duelistas
+                            competindo
+                            pela américa latina.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="not-container">
+                    <a href="https://www.yugioh-card.com/en/news/announcing-the-dragon-duel-championship/"
+                        target="_blank" class="not-img-container">
+                        <img src="img/icones/tcg-logo1.png" alt="Logo do Yu-Gi-Oh Trading Card Game" />
+                    </a>
+                    <article class="not-desc">
+                        <h4 class="desc-title">
+                            Anunciando o Campeonato Dragon Duel!
+                        </h4>
+                        <p class="desc-text">
+                            Muita coisa mudou no mundo. Também estamos fazendo mudanças enquanto trabalhamos para
+                            oferecer as
+                            melhores experiências de Jogo Organizado para nossos Duelistas na América do Norte e Latina.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="not-container">
+                    <a href="https://www.yugioh-card.com/en/news/world-championship-2023/" target="_blank"
+                        class="not-img-container">
+                        <img src="img/icones/logo2.png" alt="Logo do campeonato mundial de Yu-Gi-Oh de 2023">
+                    </a>
+                    <article class="not-desc">
+                        <h4 class="desc-title">
+                            Konami anuncia o retorno do Campeonato Mundial para 2023
+                        </h4>
+                        <p class="desc-text">
+                            A Konami Digital Entertainment Inc., tem o prazer de anunciar seus planos de realizar o
+                            Yu-Gi-Oh!
+                            Campeonato Mundial 2023, para determinar os melhores duelistas do mundo.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--FOOTER-->
+    <footer>
+        <div class="footer-content">
+            <section class="footer-left-container">
+                <div class="footer-left-title-container">
+                    <h3 class="footer-left-title">
+                        YU-GI-UNIVERSE
+                    </h3>
+
+                    <div class="footer-left-image">
+                        <a href="#" class="footer-image">
+                            <img src="img/icones/logo-yugi-universe.png" alt="Logo de Yu-Gi-Oh">
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="footer-middle-container">
+                <div class="link-container">
+                    <ul class="footer-list">
+                        <li class="list-items">
+                            <a href="index.html" class="list-links">
+                                <span class="list-names">
+                                    INÍCIO
+                                </span>
+                            </a>
+                        </li>
+
+                        <li class="list-items">
+                            <a href="eventos.html" class="list-links">
+                                <span class="list-names">
+                                    EVENTOS
+                                </span>
+                            </a>
+                        </li>
+
+                        <li class="list-items">
+                            <a href="series.html" class="list-links">
+                                <span class="list-names">
+                                    SÉRIES
+                                </span>
+                            </a>
+                        </li>
+
+                        <li class="list-items">
+                            <a href="contato.html" class="list-links">
+                                <span class="list-names">
+                                    CONTATO
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="footer-right-container">
+                <div class="footer-right-content-container">
+                    <div class="follow-us-container">
+                        <h2 class="follow-us-title">
+                            SIGA-NOS
+                        </h2>
+                    </div>
+
+                    <div class="social-icons-container">
+                        <ul class="social-list">
+                            <li class="social-icon-container">
+                                <a href="#" class="icon-link">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                            </li>
+                            <li class="social-icon-container">
+                                <a href="#" class="icon-link">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li class="social-icon-container">
+                                <a href="#" class="icon-link">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="copyright-container">
+            <div class="copyright-title">
+                <h4>
+                    Desenvolvido por CodigoGeek <sup>©</sup>
+                </h4>
+            </div>
+            <p class="copyright-text">
+                Yu-Gi-Oh! é uma marca registrada de Kazuki Takahashi, Konami © 1996-2023.
+            </p>
+        </div>
+
+    </footer>
+
+    <script src="js/index.js" charset="utf-8"></script>
+    <script src="js/header.js" charset="utf-8"></script>
+</body>
+
+</html>
